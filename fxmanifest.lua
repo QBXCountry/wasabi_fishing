@@ -13,17 +13,13 @@ description 'Wasabi ESX/QBCore Skill Based Fishing'
 shared_scripts { 
     '@ox_lib/init.lua',
     '@qbx_core/import.lua',
+    '@qbx_core/modules/utils.lua',
     '@qbx_core/shared/locale.lua',
     'configuration/*.lua' 
 }
 
-client_scripts { 'bridge/**/client.lua', 'client/*.lua' }
+client_scripts { '@qbx_core/modules/playerdata.lua', 'bridge/**/client.lua', 'client/*.lua' }
 
 server_scripts { 'bridge/**/server.lua', 'server/*.lua' }
-
-modules {
-    'qbx_core:playerdata',
-    'qbx_core:utils',
-}
 
 dependencies { 'ox_lib' }
